@@ -1,0 +1,47 @@
+lockfileVersion: 5.3
+
+specifiers:
+  '@svgdotjs/svg.draggable.js': ^3.0.2
+  '@svgdotjs/svg.js': ^3.1.2
+  '@svgdotjs/svg.panzoom.js': ^2.1.2
+  '@svgdotjs/svg.topoly.js': ^1.0.3
+
+dependencies:
+  '@svgdotjs/svg.draggable.js': registry.npmmirror.com/@svgdotjs/svg.draggable.js/3.0.2
+  '@svgdotjs/svg.js': registry.npmmirror.com/@svgdotjs/svg.js/3.1.2
+  '@svgdotjs/svg.panzoom.js': registry.npmmirror.com/@svgdotjs/svg.panzoom.js/2.1.2
+  '@svgdotjs/svg.topoly.js': registry.npmmirror.com/@svgdotjs/svg.topoly.js/1.0.3
+
+packages:
+
+  registry.npmmirror.com/@svgdotjs/svg.draggable.js/3.0.2:
+    resolution: {integrity: sha512-yqCJe/w1q3IK51zRiqB42rsvQHyX5oqg/Eck02TDRhRv+pQ7sSHJfdyljiGkqoFW4i/1sIpnqYmiLDeM12Nhsw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@svgdotjs/svg.draggable.js/-/svg.draggable.js-3.0.2.tgz}
+    name: '@svgdotjs/svg.draggable.js'
+    version: 3.0.2
+    engines: {node: '>= 0.8.0'}
+    dependencies:
+      '@svgdotjs/svg.js': registry.npmmirror.com/@svgdotjs/svg.js/3.1.2
+    dev: false
+
+  registry.npmmirror.com/@svgdotjs/svg.js/3.1.2:
+    resolution: {integrity: sha512-0ZCWTiuRjCXT2SUoVDiu+8DLuRQlkxZbO680Y2QkV7jNsULzJajrx6A3MxA/IBQg6UGV5csgPZ8w7U57hZSK+A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@svgdotjs/svg.js/-/svg.js-3.1.2.tgz}
+    name: '@svgdotjs/svg.js'
+    version: 3.1.2
+    dev: false
+
+  registry.npmmirror.com/@svgdotjs/svg.panzoom.js/2.1.2:
+    resolution: {integrity: sha512-0Nzo2TRlTebW3pzfAPtHx8Ye7Y3kuMEkK7hwVJi0SgQUB/vstjg7fvCJxB++EqsuDEetP0/SC+4CpLMVm6Lh2g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@svgdotjs/svg.panzoom.js/-/svg.panzoom.js-2.1.2.tgz}
+    name: '@svgdotjs/svg.panzoom.js'
+    version: 2.1.2
+    dependencies:
+      '@svgdotjs/svg.js': registry.npmmirror.com/@svgdotjs/svg.js/3.1.2
+    dev: false
+
+  registry.npmmirror.com/@svgdotjs/svg.topoly.js/1.0.3:
+    resolution: {integrity: sha512-Lw6NtBlsFsf5XxD5o9qMBbN34zdQdJVPsIS70y2tgzOk+bZhkcAQ+J0VwzCZKq06h7iIWJ60W9n8si7es2vgdA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@svgdotjs/svg.topoly.js/-/svg.topoly.js-1.0.3.tgz}
+    name: '@svgdotjs/svg.topoly.js'
+    version: 1.0.3
+    engines: {node: '>= 0.8.0'}
+    dependencies:
+      '@svgdotjs/svg.js': registry.npmmirror.com/@svgdotjs/svg.js/3.1.2
+    dev: false

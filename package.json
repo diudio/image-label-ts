@@ -9,6 +9,12 @@
   "keywords": [
     "图片标注"
   ],
+  "dependencies": {
+    "@svgdotjs/svg.draggable.js": "^3.0.2",
+    "@svgdotjs/svg.js": "^3.1.2",
+    "@svgdotjs/svg.panzoom.js": "^2.1.2",
+    "@svgdotjs/svg.topoly.js": "^1.0.3"
+  },
   "author": "diudio",
   "license": "ISC"
 }
