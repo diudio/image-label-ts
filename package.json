@@ -1,6 +1,6 @@
 {
   "name": "image-label-ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "基于ts的前端图片标注组件，不依赖vue和react",
   "main": "index.js",
   "scripts": {
