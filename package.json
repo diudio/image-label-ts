@@ -13,8 +13,12 @@
     "@svgdotjs/svg.draggable.js": "^3.0.2",
     "@svgdotjs/svg.js": "^3.1.2",
     "@svgdotjs/svg.panzoom.js": "^2.1.2",
-    "@svgdotjs/svg.topoly.js": "^1.0.3"
+    "@svgdotjs/svg.topoly.js": "^1.0.3",
+    "lodash-es": "^4.17.21"
   },
   "author": "diudio",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.0.0"
+  }
 }

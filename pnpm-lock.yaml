@@ -5,12 +5,18 @@ specifiers:
   '@svgdotjs/svg.js': ^3.1.2
   '@svgdotjs/svg.panzoom.js': ^2.1.2
   '@svgdotjs/svg.topoly.js': ^1.0.3
+  '@types/node': ^18.0.0
+  lodash-es: ^4.17.21
 
 dependencies:
   '@svgdotjs/svg.draggable.js': registry.npmmirror.com/@svgdotjs/svg.draggable.js/3.0.2
   '@svgdotjs/svg.js': registry.npmmirror.com/@svgdotjs/svg.js/3.1.2
   '@svgdotjs/svg.panzoom.js': registry.npmmirror.com/@svgdotjs/svg.panzoom.js/2.1.2
   '@svgdotjs/svg.topoly.js': registry.npmmirror.com/@svgdotjs/svg.topoly.js/1.0.3
+  lodash-es: registry.npmmirror.com/lodash-es/4.17.21
+
+devDependencies:
+  '@types/node': registry.npmmirror.com/@types/node/18.0.0
 
 packages:
 
@@ -44,4 +50,16 @@ packages:
     engines: {node: '>= 0.8.0'}
     dependencies:
       '@svgdotjs/svg.js': registry.npmmirror.com/@svgdotjs/svg.js/3.1.2
+    dev: false
+
+  registry.npmmirror.com/@types/node/18.0.0:
+    resolution: {integrity: sha512-cHlGmko4gWLVI27cGJntjs/Sj8th9aYwplmZFwmmgYQQvL5NUsgVJG7OddLvNfLqYS31KFN0s3qlaD9qCaxACA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/node/-/node-18.0.0.tgz}
+    name: '@types/node'
+    version: 18.0.0
+    dev: true
+
+  registry.npmmirror.com/lodash-es/4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lodash-es/-/lodash-es-4.17.21.tgz}
+    name: lodash-es
+    version: 4.17.21
     dev: false

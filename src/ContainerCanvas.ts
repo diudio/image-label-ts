@@ -183,7 +183,7 @@ export class ContainerCanvas {
   zoom;
   style;
   layerName;
-  mode;
+  mode: ModeEnum;
   event;
   transform;
 
@@ -199,7 +199,7 @@ export class ContainerCanvas {
     this.canvas = this.root.group().attr({ id: 'canvas' });
 
     this.root.size(this.width, this.height).viewbox(0, 0, this.width, this.height);
-    if (this.mode !== 'default') {
+    if (this.mode !== ModeEnum.default) {
       this.root = this.root.panZoom(this.zoom);
     }
 
@@ -225,7 +225,7 @@ export class ContainerCanvas {
     });
   }
 
-  static init(el: HTMLElement, option: IContainerCanvasOptionIn) {
+  static init(el: HTMLElement, option: IContainerCanvasOptionIn): IContainerCanvas {
     return new ContainerCanvas(el, option);
   }
 
@@ -321,7 +321,9 @@ export class ContainerCanvas {
     }
     this.root.zoom(1);
     this.root.zoomNum = 1;
-    this.root = this.root.panZoom(this.zoom);
+    if (this.mode !== ModeEnum.default) {
+      this.root = this.root.panZoom(this.zoom);
+    }
     this.root.viewbox(0, 0, this.width, this.height);
 
     this.clear();
