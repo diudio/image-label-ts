@@ -1,6 +1,6 @@
-import { Layer, LayerCanvas } from './Layer.js';
-import { LayerTypeEnum } from './Layer.js';
-import { SelectLayer } from './SelectLayer.js';
+import { Layer, LayerCanvas } from './Layer';
+import { LayerTypeEnum } from './Layer';
+import { SelectLayer } from './SelectLayer';
 import _ from 'lodash-es';
 const defaultIPolygonOption = {
     name: '',

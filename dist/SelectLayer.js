@@ -1,5 +1,5 @@
-import { Polygon } from './Polygon.js';
-import { LayerTypeEnum } from './Layer.js';
+import { Polygon } from './Polygon';
+import { LayerTypeEnum } from './Layer';
 export class SelectLayer {
     containerCanvas;
     layer;

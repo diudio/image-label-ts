@@ -1,5 +1,5 @@
-import { IPolygon } from './Polygon.js';
-import { IContainerCanvas } from './ContainerCanvas.js';
+import { IPolygon } from './Polygon';
+import { IContainerCanvas } from './ContainerCanvas';
 export interface ISelectLayerStatic {
     containerCanvas: IContainerCanvas;
     layer: IPolygon;

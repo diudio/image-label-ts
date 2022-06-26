@@ -2,10 +2,10 @@ import { SVG } from '@svgdotjs/svg.js';
 import '@svgdotjs/svg.panzoom.js';
 import '@svgdotjs/svg.draggable.js';
 import '@svgdotjs/svg.topoly.js';
-import { LayerTypeEnum } from './Layer.js';
-import { Polygon, PolygonCanvas, } from './Polygon.js';
+import { LayerTypeEnum } from './Layer';
+import { Polygon, PolygonCanvas, } from './Polygon';
 import _ from 'lodash-es';
-import { loadImage } from './utils.js';
+import { loadImage } from './utils';
 export var ModeEnum;
 (function (ModeEnum) {
     ModeEnum["default"] = "default";

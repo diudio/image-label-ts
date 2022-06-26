@@ -1,9 +1,9 @@
 import '@svgdotjs/svg.panzoom.js';
 import '@svgdotjs/svg.draggable.js';
 import '@svgdotjs/svg.topoly.js';
-import { LayerTypeEnum } from './Layer.js';
-import { IPolygon, IPolygonOptionIn, IPolygonOptionInExceptPoints, TPoints } from './Polygon.js';
-import { ISelectLayer } from './SelectLayer.js';
+import { LayerTypeEnum } from './Layer';
+import { IPolygon, IPolygonOptionIn, IPolygonOptionInExceptPoints, TPoints } from './Polygon';
+import { ISelectLayer } from './SelectLayer';
 export interface IContainerCanvasStatic {
     new (el: HTMLElement, option: IContainerCanvasOptionIn): IContainerCanvas;
     init(el: HTMLElement, option: IContainerCanvasOptionIn): IContainerCanvas;

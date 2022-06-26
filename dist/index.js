@@ -1,5 +1,5 @@
-export * from './Layer.js';
-export * from './ContainerCanvas.js';
-export * from './Polygon.js';
-export * from './SelectLayer.js';
+export * from './Layer';
+export * from './ContainerCanvas';
+export * from './Polygon';
+export * from './SelectLayer';
 //# sourceMappingURL=index.js.map

@@ -1,4 +1,4 @@
-import { IContainerCanvas } from './ContainerCanvas.js';
+import { IContainerCanvas } from './ContainerCanvas';
 export declare enum LayerTypeEnum {
     polygon = "polygon"
 }

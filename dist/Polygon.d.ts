@@ -1,5 +1,5 @@
-import { IContainerCanvas } from './ContainerCanvas.js';
-import { Layer, ILayer, LayerCanvas } from './Layer.js';
+import { IContainerCanvas } from './ContainerCanvas';
+import { Layer, ILayer, LayerCanvas } from './Layer';
 export declare type TPoints = Array<{
     x: number;
     y: number;
