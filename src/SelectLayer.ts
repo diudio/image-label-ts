@@ -1,7 +1,7 @@
 import { IPolygon, Polygon } from './Polygon';
 import { IContainerCanvas } from './ContainerCanvas';
 import { LayerTypeEnum } from './Layer';
-
+import IconClose from './icon_close.png';
 export interface ISelectLayerStatic {
   containerCanvas: IContainerCanvas;
   layer: IPolygon;
@@ -88,7 +88,7 @@ export class SelectLayer {
       this.selectDom.closeBtn.remove();
     }
     this.selectDom.closeBtn = this.containerCanvas.canvas
-      .image(new URL('./icon_close.png', import.meta.url).href)
+      .image(new URL(IconClose, import.meta.url).href)
       .size(40, 40)
       .attr({
         x: points[minIndex][0] + left,

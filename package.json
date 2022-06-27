@@ -2,7 +2,7 @@
   "name": "image-label-ts",
   "version": "1.0.4",
   "description": "基于ts的前端图片标注组件，不依赖vue和react",
-  "main": "dist/index.js",
+  "main": "src/index.ts",
   "type": "module",
   "scripts": {
     "test": "mocha --reporter spec",
