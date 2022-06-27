@@ -54,6 +54,9 @@ export interface IContainerCanvas extends IContainerCanvasOption {
 
   loadImage(imageUrl: string, imageWidth?: number, imageHeight?: number); // 加载图片
 
+  drawMask(color: string);
+  drawPolygonImages(points: TPoints[], imageUrl?:string);
+
   drawLayer(type: LayerTypeEnum.polygon, option: IPolygonOptionIn); // 绘制一个图形
   // drawLayer(type: LayerTypeEnum.rect, option: IPolygonOptionIn); // 绘制一个图形
 
@@ -69,6 +72,7 @@ export interface IContainerCanvas extends IContainerCanvasOption {
     imageUrl: string,
     options?: Array<{ type: LayerTypeEnum.polygon; option: IPolygonOptionMorePoints[] }>,
   ); // 切换图片并且绘制多边形
+
 }
 
 export interface IContainerCanvasOption {
@@ -363,7 +367,7 @@ export class ContainerCanvas {
   }
 
   // 画蒙层
-  drawMask(color) {
+  drawMask(color:string) {
     this.canvas
       .rect(this.drawImageWidth, this.drawImageHeight)
       .fill(color)
@@ -371,7 +375,7 @@ export class ContainerCanvas {
   }
 
   // 画一个图片的多边形可使区域
-  drawPolygonImage(points, imageUrl = this.imageUrl) {
+  drawPolygonImages(points: TPoints[], imageUrl = this.imageUrl) {
     if (!points || !points.length) return;
     const pattern = this.root
       .defs()
@@ -379,16 +383,18 @@ export class ContainerCanvas {
       .attr({ x: this.transform.offsetX, y: this.transform.offsetY });
     pattern.image(imageUrl).size(this.drawImageWidth, this.drawImageHeight);
 
-    const _points = Polygon.transformOriginPointsToSVG({
-      points,
-      scale: this.transform.scale,
-      offsetX: this.transform.offsetX,
-      offsetY: this.transform.offsetY,
-    });
-
-    const str = _points.map((item) => `${item[0]},${item[1]}`).join(' ');
-
-    this.canvas.polygon(str).fill(pattern);
+    points.forEach(point => {
+      const _points = Polygon.transformOriginPointsToSVG({
+        points: point,
+        scale: this.transform.scale,
+        offsetX: this.transform.offsetX,
+        offsetY: this.transform.offsetY,
+      });
+  
+      const str = _points.map((item) => `${item[0]},${item[1]}`).join(' ');
+  
+      this.canvas.polygon(str).fill(pattern);
+    })
   }
 
   // 绘制一个图形
