@@ -2,7 +2,7 @@ import { IContainerCanvas } from './ContainerCanvas';
 import { Layer, ILayer, LayerCanvas } from './Layer';
 import { LayerTypeEnum } from './Layer';
 import { SelectLayer } from './SelectLayer';
-import _ from 'lodash-es';
+import { merge } from 'lodash-es';
 
 export type TPoints = Array<{ x: number; y: number }>; // 传入和传出的点位格式
 export type TPointsSvg = Array<[number, number]>; // svg内部绘制的点位格式
@@ -167,7 +167,7 @@ export class Polygon extends Layer implements IPolygon {
   // todo 此api出错率高，可做单元测试
   setOption(option: IPolygonOptionIn) {
     this.type = LayerTypeEnum.polygon;
-    const _option = _.merge({}, defaultIPolygonOption, this, JSON.parse(JSON.stringify(option))); // 深度合并
+    const _option = merge({}, defaultIPolygonOption, this, JSON.parse(JSON.stringify(option))); // 深度合并
     Object.keys(_option).forEach((key) => {
       this[key] = option[key] ? _option[key] : this[key] || defaultIPolygonOption[key];
     });

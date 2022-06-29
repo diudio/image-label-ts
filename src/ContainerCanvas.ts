@@ -11,7 +11,7 @@ import {
   PolygonCanvas,
   TPoints,
 } from './Polygon';
-import _ from 'lodash-es';
+import { merge } from 'lodash-es';
 import { ISelectLayer } from './SelectLayer';
 import { loadImage } from './utils';
 
@@ -187,7 +187,7 @@ export class ContainerCanvas {
   zoom;
   style;
   layerName;
-  mode: ModeEnum;
+  mode;
   event;
   transform;
 
@@ -234,7 +234,7 @@ export class ContainerCanvas {
   }
 
   setOption(option: IContainerCanvasOptionIn) {
-    const _option: IContainerCanvasOption = _.merge({}, defaultContainerCanvasOption, option);
+    const _option: IContainerCanvasOption = merge({}, defaultContainerCanvasOption, option);
     Object.keys(_option).forEach((key) => {
       // this[key] = _option[key];
       this[key] = this[key] || _option[key];
