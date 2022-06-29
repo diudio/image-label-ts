@@ -50,6 +50,7 @@ export interface IContainerCanvas extends IContainerCanvasOption {
   getLayers(type: LayerTypeEnum): IPolygon[]; // 获取所有的图形
   getLayersByName(type: LayerTypeEnum, name: string): IPolygon[]; // 获取所有的图形
   removeLayerByLayer(layer: IPolygon); // 根据多边形删除多边形
+  removeLayerById(layer: IPolygon); // 根据id删除多边形
   drawDone();
 
   loadImage(imageUrl: string, imageWidth?: number, imageHeight?: number); // 加载图片
@@ -285,13 +286,22 @@ export class ContainerCanvas {
 
   // 根据多边形删除多边形
   removeLayerByLayer(layer: IPolygon) {
-    console.log('l', layer);
     layer.remove();
     for (let i = 0; i < this.layers.length; i++) {
       if (this.layers[i] === layer) {
         this.layers.splice(i, 1);
         return;
       }
+    }
+  }
+
+  // 根据多边形删除多边形
+  removeLayerById(id: string) {
+    const layer = this.layers.find(item => item.id === id)
+    if (layer) {
+      layer.remove();
+      const index = this.layers.indexOf(layer)
+      this.layers.splice(index, 1);
     }
   }
 

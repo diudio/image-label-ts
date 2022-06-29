@@ -51,6 +51,7 @@ export interface IPolygonOption {
 }
 
 export interface IPolygonOptionInExceptPoints {
+  id?: string;
   name?: string;
   style?: {
     color?: string;
@@ -109,6 +110,9 @@ export class Polygon extends Layer implements IPolygon {
       .attr({ id: 'polygonCanvas-polygon-once', width, height });
     this.canvasOnce.rect(width, height).attr({ x, y });
     this.setOption(option);
+    if (!this.id) {
+      this.id = Math.floor(Math.random()*1e10).toString()
+    }
     this.draw();
   }
 

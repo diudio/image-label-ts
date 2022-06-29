@@ -6,6 +6,7 @@ export enum LayerTypeEnum {
 }
 
 export interface ILayer {
+  id: string;
   containerCanvas: IContainerCanvas;
   type: LayerTypeEnum;
   dom: any;
@@ -19,6 +20,7 @@ export class Layer {
   type;
   dom;
   name;
+  id;
   constructor() {}
 }
 
