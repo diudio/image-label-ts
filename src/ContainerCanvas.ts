@@ -50,7 +50,7 @@ export interface IContainerCanvas extends IContainerCanvasOption {
   getLayers(type: LayerTypeEnum): IPolygon[]; // 获取所有的图形
   getLayersByName(type: LayerTypeEnum, name: string): IPolygon[]; // 获取所有的图形
   removeLayerByLayer(layer: IPolygon); // 根据多边形删除多边形
-  removeLayerById(layer: IPolygon); // 根据id删除多边形
+  removeLayerById(id: string); // 根据id删除多边形
   drawDone();
 
   loadImage(imageUrl: string, imageWidth?: number, imageHeight?: number); // 加载图片
@@ -98,6 +98,7 @@ export interface IContainerCanvasOption {
     select(layer: IPolygon): void;
     remove(layer: IPolygon): void;
     dragEnd(layer: IPolygon): void;
+    clickCanvas(): void;
     beforeLoadImage(): void;
     loadedImage(): void;
   };
@@ -131,6 +132,7 @@ export interface IContainerCanvasOptionIn {
     select?(layer: IPolygon): void;
     remove?(layer: IPolygon): void;
     dragEnd?(layer: IPolygon): void;
+    clickCanvas?(): void;
     beforeLoadImage?(): void;
     loadedImage?(): void;
   };
@@ -163,6 +165,7 @@ export const defaultContainerCanvasOption = {
     select: () => {},
     remove: () => {},
     dragEnd: () => {},
+    clickCanvas: () => {},
     beforeLoadImage: () => {},
     loadedImage: () => {},
   },
@@ -227,6 +230,7 @@ export class ContainerCanvas {
     this.canvas.on('click', () => {
       this.selectLayer && this.selectLayer.removeSelect();
       this.selectLayer = undefined;
+      this.event.clickCanvas && this.event.clickCanvas()
     });
   }
 
